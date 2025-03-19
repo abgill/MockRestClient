@@ -1,13 +1,12 @@
 package org.abgill.restClientMock;
 
 import org.springframework.http.HttpMethod;
-import org.springframework.web.client.DefaultRestClient;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 
-public class RestClientMock implements RestClient {
+public class RestClientMock implements MockableRestClient {
 
     @Override
     public RequestHeadersUriSpec<?> get() {
@@ -56,32 +55,7 @@ public class RestClientMock implements RestClient {
 
 
 
-    // The following methods are not supported.
 
-    static RestClient create() {
-        throw new NotSupportedException();
-    }
-
-
-    static RestClient create(String baseUrl) {
-        throw new NotSupportedException();
-    }
-
-    static RestClient create(URI baseUrl) {
-        throw new NotSupportedException();
-    }
-
-    static RestClient create(RestTemplate restTemplate) {
-        throw new NotSupportedException();
-    }
-
-    static RestClient.Builder builder() {
-        throw new NotSupportedException();
-    }
-
-    static RestClient.Builder builder(RestTemplate restTemplate) {
-        throw new NotSupportedException();
-    }
 
 
 
