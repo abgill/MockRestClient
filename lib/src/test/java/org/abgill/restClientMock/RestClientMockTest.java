@@ -10,11 +10,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RestClientMockTest {
 
-    RestClient restClientMock;
+    MockableRestClient restClientMock;
 
     @BeforeEach
     void setup() {
-        restClientMock = new MockRestClientBuilder().build();
+        MockableRestClient mockableRestClient = new RestClientMock();
+//        restClientMock = new MockRestClientBuilder().build();
     }
 
     @Test
